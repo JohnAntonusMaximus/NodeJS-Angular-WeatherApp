@@ -12,4 +12,4 @@ weatherApp.service('weatherService', ['$resource',function($resource){
 
     return weatherAPI.get({ q: city, cnt: days });
     };
-}]);
+}]); 
