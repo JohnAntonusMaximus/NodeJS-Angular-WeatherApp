@@ -4,6 +4,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mustache = require('mustache-express');
+var PORT = node.env.PORT || 3000;
 
 var routes = require('./routes/index');
 
@@ -24,5 +25,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 
-console.log('Listening on Port 3000...');
-app.listen(3000);
+console.log('Listening on Port ' + PORT + '...');
+app.listen(PORT);
