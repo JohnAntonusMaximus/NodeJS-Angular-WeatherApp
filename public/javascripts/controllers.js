@@ -12,7 +12,7 @@ weatherApp.controller('forecastController',['$scope','cityService', '$resource',
 
     $scope.days = $routeParams.days || '2';
 
-    $scope.weatherAPI = $resource("http://api.openweathermap.org/data/2.5/forecast/daily?&APPID=a7726b35da74db8db9e62ce5d0ebe7ff", {callback: "JSON_CALLBACK"},
+    $scope.weatherAPI = $resource("https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast/daily?&APPID=a7726b35da74db8db9e62ce5d0ebe7ff", {callback: "JSON_CALLBACK"},
     { get: {method: "JSONP"}});
 
     $scope.weatherResult = $scope.weatherAPI.get({ q: $scope.city, cnt: $scope.days });
