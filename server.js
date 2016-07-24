@@ -4,7 +4,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mustache = require('mustache-express');
-var PORT = node.env.PORT || 3000;
+var PORT = process.env.PORT || 3000;
 
 var routes = require('./routes/index');
 
